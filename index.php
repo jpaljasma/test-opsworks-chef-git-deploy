@@ -15,6 +15,15 @@
 <html>
 	<head>
 		<title><?php echo _u8enc($content->title); ?></title>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans">
+		<style type="text/css">
+		    * { margin: 0; padding: 0; outline: none; -webkit-font-smoothing: antialiased; }
+		    html, body {
+                height: 100%;
+                font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+                color: #271b15;
+            }
+		</stylee>
 	</head>
 	<body>
 		<h1><?php echo _u8enc($content->h1); ?></h1>
