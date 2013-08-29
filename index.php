@@ -1,7 +1,5 @@
 <?php
-/**
-
-**/
+/** **/
     
 function _u8enc($s) {
 	return htmlentities($s, ENT_COMPAT, 'utf-8');
@@ -18,18 +16,37 @@ if(!isset($content)) {
 <html>
 	<head>
         <title><?php echo _u8enc($content->title); ?></title>
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Baskerville">
         <style type="text/css">
             * { margin: 0; padding: 0; outline: none; -webkit-font-smoothing: antialiased; }
             html, body {
                 height: 100%;
-                font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-family: "Baskerville",serif;
                 color: #271b15;
             }
+			.wrapper {
+				width: 1140px;
+				margin: 0 auto;
+			}
+			header {
+				min-height: 200px;
+			}
+			h1, h2, h3 { font-weight: normal; }
+			h1 { font-size: 55px;  line-height: 68px; }
+			h2 { font-size: 34px;  line-height: 47px;}
+			h3 { font-size: 27px;  line-height: 40px; }
+			p { font-size: 21px; line-height: 34px; }
+			small { font-size: 17px; line-height: 30px; }
         </style>
 	</head>
 	<body>
-		<h1><?php echo _u8enc($content->h1); ?></h1>
-		<?php echo $content->body; ?>
+		<div class="wrapper">
+			<header></header>
+			<article>
+				<h1><?php echo _u8enc($content->h1); ?></h1>
+				<h2>Heading 2, hardcoded in this template.</h2>
+				<?php echo $content->body; ?>			
+			</article>
+		</div>
 	</body>
 </html>
