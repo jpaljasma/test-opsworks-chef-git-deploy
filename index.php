@@ -16,12 +16,12 @@ if(!isset($content)) {
 <html>
 	<head>
         <title><?php echo _u8enc($content->title); ?></title>
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Baskerville">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,300,100">
         <style type="text/css">
             * { margin: 0; padding: 0; outline: none; -webkit-font-smoothing: antialiased; }
             html, body {
                 height: 100%;
-                font-family: "Baskerville",serif;
+                font-family: "Roboto",serif;
                 color: #271b15;
             }
 			.wrapper {
@@ -32,10 +32,11 @@ if(!isset($content)) {
 				min-height: 200px;
 			}
 			h1, h2, h3 { font-weight: normal; }
+			h1+h2 { margin-bottom: 20px; }
 			h1 { font-size: 55px;  line-height: 68px; }
 			h2 { font-size: 34px;  line-height: 47px;}
 			h3 { font-size: 27px;  line-height: 40px; }
-			p { font-size: 21px; line-height: 34px; }
+			p { font-size: 21px; line-height: 34px; font-weight: 300; }
 			small { font-size: 17px; line-height: 30px; }
         </style>
 	</head>
